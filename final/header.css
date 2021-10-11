@@ -1,0 +1,196 @@
+/*This styles page is dedicated to the blinking header*/
+
+.sign {
+ position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 20%;
+  background-image: radial-gradient(
+    ellipse 50% 35% at 50% 50%,
+    #FFFFFF,
+    transparent
+  );
+  transform: translate(-50%, -50%);
+  letter-spacing: 2;
+  left: 50%;
+  top: 10%;
+  font-family: 'Leckerli One', cursive;
+  text-transform: none;
+  font-size: 6em;
+  color: black;
+  text-shadow: 0 0 0.6rem #000000, 0 0 1.5rem #808080,
+    -0.2rem 0.1rem 1rem #C0C0C0, 0.2rem 0.1rem 1rem #FFFFFF,
+    0 -0.5rem 2rem #000000, 0 0.5rem 3rem #FFFFFF;
+  animation: shine 2s forwards, flicker 3s infinite;
+}
+
+@keyframes blink {
+  0%,
+  22%,
+  36%,
+  75% {
+    color: #FFFFFF;
+    text-shadow: 0 0 0.6rem #000000, 0 0 1.5rem #COCOCO,
+      -0.2rem 0.1rem 1rem #FFFFFF, 0.2rem 0.1rem 1rem #ffffff,
+      0 -0.5rem 2rem #000000, 0 0.5rem 3rem #000000;
+  }
+  28%,
+  33% {
+    color: #808080;
+    text-shadow: none;
+  }
+  82%,
+  97% {
+    color: #000000;
+    text-shadow: none;
+  }
+}
+
+.flicker {
+  animation: shine 2s forwards, blink 3s 2s infinite;
+}
+
+.fast-flicker {
+  animation: shine 2s forwards, blink 10s 1s infinite;
+}
+
+@keyframes shine {
+  0% {
+    color: #FFFFFF;
+    text-shadow: none;
+  }
+  100% {
+    color: #FFFFFF;
+    text-shadow: 0 0 0.6rem #FFFFFF, 0 0 1.5rem #000000,
+      -0.2rem 0.1rem 1rem #808080, 0.2rem 0.1rem 1rem #C0C0C0,
+      0 -0.5rem 2rem #000000, 0 0.5rem 3rem #000000;
+  }
+}
+
+@keyframes flicker {
+  from {
+    opacity: 1;
+  }
+
+  4% {
+    opacity: 0.9;
+  }
+
+  6% {
+    opacity: 0.85;
+  }
+
+  8% {
+    opacity: 0.95;
+  }
+
+  10% {
+    opacity: 0.9;
+  }
+
+  11% {
+    opacity: 0.922;
+  }
+
+  12% {
+    opacity: 0.9;
+  }
+
+  14% {
+    opacity: 0.95;
+  }
+
+  16% {
+    opacity: 0.98;
+  }
+
+  17% {
+    opacity: 0.9;
+  }
+
+  19% {
+    opacity: 0.93;
+  }
+
+  20% {
+    opacity: 0.99;
+  }
+
+  24% {
+    opacity: 1;
+  }
+
+  26% {
+    opacity: 0.94;
+  }
+
+  28% {
+    opacity: 0.98;
+  }
+
+  37% {
+    opacity: 0.93;
+  }
+
+  38% {
+    opacity: 0.5;
+  }
+
+  39% {
+    opacity: 0.96;
+  }
+
+  42% {
+    opacity: 1;
+  }
+
+  44% {
+    opacity: 0.97;
+  }
+
+  46% {
+    opacity: 0.94;
+  }
+
+  56% {
+    opacity: 0.9;
+  }
+
+  58% {
+    opacity: 0.9;
+  }
+
+  60% {
+    opacity: 0.99;
+  }
+
+  68% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0.9;
+  }
+
+  72% {
+    opacity: 0.95;
+  }
+
+  93% {
+    opacity: 0.93;
+  }
+
+  95% {
+    opacity: 0.95;
+  }
+
+  97% {
+    opacity: 0.93;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

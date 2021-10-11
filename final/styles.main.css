@@ -1,0 +1,357 @@
+html {
+    background-color: whitesmoke;  
+    background-image: url(images/bckgnd2_1_1920x1920.jpg);
+} 
+
+header h1 {
+    text-align: center;
+    font-family: 'Leckerli One', cursive, sans-serif, Arial, Verdana;
+    color: black;
+    /*font-size: 500%;*/
+    padding: inherit;
+    width: 100%;
+}
+
+header h2 {
+    text-align: center;
+    font-family: 'Leckerli One', cursive, sans-serif, Arial, Verdana;
+    color: black;
+    font-size: 300%;
+    padding: inherit;
+    width: 100%;    
+}
+
+* {
+/* setting the margin and padding values of all default HTML elements*/
+   /* margin: 0;
+    padding: 0;
+/* prevents users from selecting and copying text on page*/
+    user-select: none;
+}
+
+/*body {
+/* setting the base font to the body
+    font-family: 'Concert One', cursive; } */
+
+body {
+    width: 100%;
+}
+
+#nav_menu ul{
+/* removes the bullets of the unordered list*/
+    list-style-type: none;
+    width: 100%;
+    height: 60px;
+/* centers menu*/
+    margin: 0 auto;
+    background-color: black;
+}
+
+#nav_menu ul li {
+/* styles list items*/
+    width: 16%;
+    float: left;
+/* places horizontally in center*/
+    text-align: center;
+/* places vertically in center*/
+    line-height: 60px;
+/* used for smooth transition effect*/
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+#nav_menu ul li:hover{
+/* when users hover over menu bar, will highlight*/
+    background-color: darkgrey;
+}
+
+#nav_menu ul li a {
+    padding: 1em 0;
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 100%;
+    font-family: 'Concert One', cursive, sans-serif, Arial, Verdana;
+}
+
+/* hides mobile bar in the desktop version and makes it visible in mobile version*/
+#mobile_menu {
+    display: none;
+}
+
+#mobile_menu {
+    display: block;
+}
+
+/* media queries when resizing browser below 900pixels, should activate mobile browser */
+
+
+@media only screen and (max-width: 767px) {
+    #nav_menu {
+        display: none;
+    }
+    #mobile_menu {
+        display: block;
+    }
+    .slicknav_menu{
+        background-color: black !important;
+    }
+    body {
+        width: 100%;
+        margin: 0;
+        border: none;
+    }
+    header, footer {
+        text-align: center;
+    }
+    footer {
+        margin-right: 0;
+        border: none;
+    }
+    header h2 { 
+    font-size: 1.625em;
+    margin: .4em 0 .25em 0;
+    }
+    
+}
+
+
+main {
+    align-content: flex-end;
+    width: 100%;
+}
+
+.services, /*.aboutus,*/ .aftercare, .bookapt {
+    text-align: center;
+    font-size: 20px;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: gainsboro;
+    border: 4px solid gainsboro;
+}
+
+main img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    height: 10%;    
+}
+
+main h1 {
+   font-family: 'Concert One', cursive, sans-serif, Arial, Verdana;  
+}
+
+main h3 {
+    font-family: 'Concert One', cursive, sans-serif, Arial, Verdana;
+    color: dimgrey;
+}
+
+main h4 {
+    color: crimson; 
+    font-family: 'Concert One', cursive, sans-serif, Arial, Verdana;
+}
+
+main h5 {
+    text-align: left;
+    color: black; 
+    font-family: 'Concert One', cursive, sans-serif, Arial, Verdana;
+}
+
+.aboutusmain {
+   font-family: 'Concert One', cursive, sans-serif, Arial, Verdana;
+   font-size: 22px;
+   text-align: left;
+}
+
+.aboutush2 {
+    text-align: left;
+}
+
+.aftercare ul {
+    list-style-type: none;
+}
+
+main h2{
+    text-align: center;
+    font-family: 'Concert One', cursive, sans-serif, Arial, Verdana;
+}
+
+main p{
+   font-family: 'Concert One', cursive, sans-serif, Arial, Verdana;
+   font-size: 16px;
+}
+
+main ul {
+   font-family: 'Concert One', cursive, sans-serif, Arial, Verdana;
+}
+
+
+/* This is for home page horizontal images*/
+.row {
+  display: inline-flex;
+  align-content: center;
+}
+
+.column {
+  padding: 2px;
+}
+/* This is for customer review photo row 1*/
+.row_pic1, .row_pic2, .row_pic3 {
+    display: inline-flex;
+    position: relative;
+    width: 400px;
+}
+
+.pic1, .pic2, .pic3 {
+   display: flex; 
+    width: 100%;
+}
+
+.image1_overlay, .image2_overlay, .image3_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-family: 'Concert One', cursive, sans-serif, Arial, Verdana;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.image1_overlay > *, .image2_overlay > *, .image3_overlay > * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+.image1_overlay:hover, .image2_overlay:hover, .image3_overlay:hover {
+    opacity: 1;
+}
+
+.image1_overlay:hover > *, .image2_overlay:hover > *, .image3_overlay:hover > * {
+    transform: translateY(0);
+}
+
+.image1_title, .image2_title, .image3_title {
+    font-size: 2em;
+}
+
+.image1_description, .image2_description, .image3_description {
+    margin-top: 0.25em;
+}
+
+/* This if for column2 photos of customer review*/
+/*.column1 {
+   padding: 20px; 
+} */
+
+/*.row_two {
+    display: inline-flex;
+}
+
+.column2 {
+    padding: 20px; 
+} */
+
+
+/* This is for customer review photo row 2*/
+.row_pic4, .row_pic5, .row_pic6 {
+    display: inline-flex;
+    position: relative;
+    width: 400px;
+}
+
+.pic4, .pic5, .pic6 {
+   display: flex; 
+    width: 100%;
+}
+
+.image4_overlay, .image5_overlay, .image6_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-family: 'Concert One', cursive, sans-serif, Arial, Verdana;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.image4_overlay > *, .image5_overlay > *, .image6_overlay > * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+.image4_overlay:hover, .image5_overlay:hover, .image6_overlay:hover {
+    opacity: 1;
+}
+
+.image4_overlay:hover > *, .image5_overlay:hover > *, .image6_overlay:hover > * {
+    transform: translateY(0);
+}
+
+.image4_title, .image5_title, .image6_title {
+    font-size: 2em;
+}
+
+.image4_description, .image5_description, .image6_description {
+    margin-top: 0.25em;
+}
+
+section {
+    text-align: center;
+    font-family: 'Leckerli One', cursive, sans-serif, Arial, Verdana;
+}
+
+section img {
+    display: inline-flex;
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
+}
+
+section h2 {
+    font-family: 'Concert One', cursive, sans-serif, Arial, Verdana;  
+}
+
+aside img {
+    width: 50%;
+    height: 10%; 
+}
+
+
+.footer {
+    /*percentage used for width to remove white gap between the pages*/
+    width: 100%;
+    height: auto;
+    align-content: center;
+    flex: 1;
+    font-family: 'Concert One', cursive, sans-serif, Arial, Verdana; 
+    color: whitesmoke;
+    background-color: black;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.container {
+    width: auto;
+    display: flex;
+}
+
+
+

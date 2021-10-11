@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    
+<head>
+<meta charset="UTF-8">
+<title>Icy Teeth</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles.main.css">
+    <link rel ="stylesheet" href="contact.css">
+    <link rel="header stylesheet" href="header.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Leckerli+One&display=swap" rel="stylesheet">
+</head>
+    
+<body>
+    <header>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    <div class="sign">
+      <span class="fast-flicker">I</span>cy<span class="flicker">T</span>eeth
+    </div>
+    </header>
+
+    <nav id="mobile"></nav>
+    <nav id="nav_menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="custrev.html">Customer Review</a></li>
+            <li><a href="bookapt.html">Book Appointment</a></li>
+            <li><a href="aftercar.html">After Care</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <div class="bookapt">
+    <h1>Book your appointment today!</h1>
+    <p>Refer to our detailed services page <a href="services.html">here</a></p>
+	<form action="bookappt.php" method="post" name="appt_form" id="appt_form">
+        <fieldset>
+            <label for="first_name">First Name:</label> 
+            <!-- Visual prompt | 'for' has to be same as 'ID' -->
+			<input type="text" name="first_name" id="first_name" required><br> <!-- -->
+			<label for="last_name">Last Name:</label>
+			<input type="text" name="last_name" id="last_name" required><br>
+        	<label for="email">Email Address:</label>
+        	<input type="email" name="email" id="email" required><br>
+			<label for="phone">Phone Number:</label>
+			<input type="tel" name="phone" id="phone" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="999-999-9999" required><br>
+			<label for="appointment_date">Appointment Date:</label>
+			<input type="date" name="appointment_date" id="appointment_date" required><br>
+			<label for="subject">Subject:</label>         
+            <select name="subject" id="subject">
+                <option value="Consultations">Consultation</option>
+                <option value="Appointments">Appointment</option>
+            </select><br>
+			<label for="message">Notes:</label>
+			<textarea id="message" name="message" rows="4" required></textarea><br>
+	<!--form | collects everything & tells the system where to send info. Post means hidden from URL -->
+		</fieldset>
+		<fieldset id="buttons">
+			<label>&nbsp;</label>
+			<input type="submit" id="submit" value="Book Appointment">
+			<input type="reset" id="reset" value="Reset"><br>
+		</fieldset>
+	</form> <!-- closing form tag -->
+    </div>
+    </main>
+    
+<footer>
+    <div class="container">
+    <div class="footer hey">
+        <h3>Icy Teeth</h3>
+        <p id="copyright" class="center">&copy; Icy Teeth - EST 2021</p>
+        </div>
+    <div class="footer hours">
+        <h3>Open Hours</h3>
+        <p>Monday-Friday: 7:00am-8:00pm</p>
+        <p>Saturday: 8:00am-5:00pm</p>
+        <p>Sunday: 8:00am-5:00pm</p>
+    </div>
+    <div class="footer address">
+        <h3>Address</h3>
+        <p>0000 N. FakeAddress Street,</p>
+        <p>Milwaukee, WI</p>
+    </div>
+    </div>
+</footer>
+    
+</body>
+</html>

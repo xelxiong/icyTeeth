@@ -1,0 +1,61 @@
+/* type selectors */
+body {
+    font-family: 'Concert One', cursive, monospace, Arial, sans-serif;
+    background-color: whitesmoke;
+    background-image: url(images/bckgnd2_1_1920x1920.jpg);
+}
+
+
+label {
+	float: right;
+    width: 100%;
+    text-align: center;
+}
+
+input, select, textarea {
+    margin-left: 5em;
+    margin-right: 5em;
+    margin-bottom: .5em;
+    font-family: monospace, Arial, sans-serif;
+}
+
+#buttons input {
+	width: 12em;
+    justify-content: center;
+    align-items: center;
+}
+
+fieldset {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding-top: .5em;
+}
+
+legend {
+    font-size: 85%;
+    margin-bottom: .5em;
+    padding: .5em;
+}
+
+h2 {
+	color:#00CC00;
+}
+
+input:required:invalid {
+    background-image: url(../images/required.png);
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-color: beige;
+}
+
+input:focus:invalid {
+    background-image: url(../images/invalid.png);
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-color: beige;
+}
+input:required:valid {
+    background-image: url(../images/valid.png);
+    background-position: right top;
+    background-repeat: no-repeat;
+}

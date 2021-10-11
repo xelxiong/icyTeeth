@@ -1,0 +1,38 @@
+/*format for about us page*/
+body {
+    width: 100%;
+}
+
+main {
+    width: 100%;
+    background-color: gainsboro;
+    border: 4px solid gainsboro;
+}
+
+aside {
+    width: 33%;
+    float: right;
+    font-family: "Times New Roman", sans-serif;
+    font-size: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+article {
+    column-count: 3;
+    column-gap: 35px;
+    column-rule: 2px solid black;
+}
+
+footer {
+    /*percentage used for width to remove white gap between the pages*/
+    width: 100%;
+    height: auto;
+    align-content: center;
+    flex: 1;
+    font-family: 'Concert One', cursive, sans-serif, Arial, Verdana; 
+    color: whitesmoke;
+    background-color: black;
+    text-align: center;
+    margin: 0 auto;
+}
